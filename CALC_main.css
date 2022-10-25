@@ -1,0 +1,12 @@
+
+.display{
+    width: 130px;
+    height: 40px;
+}
+.button > button{
+    width: 30px;
+}
+
+.button2 > button{
+    width: 65px;
+}
