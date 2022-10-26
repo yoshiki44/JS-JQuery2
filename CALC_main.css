@@ -1,12 +1,19 @@
+body{
+    font-size: 20px;
+}
 
-.display{
-    width: 130px;
-    height: 40px;
+#display{
+    width: 140px;
+    height: 30px;
+    text-align: right;
+    background-color: black;
+    color: white;
 }
 .button > button{
     width: 30px;
+    margin-right: 2px;
 }
 
 .button2 > button{
-    width: 65px;
+    width: 70px;
 }
