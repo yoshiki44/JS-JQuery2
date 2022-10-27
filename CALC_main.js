@@ -9,14 +9,14 @@ function numberClick(target) {
         equalCount = 0;
     }
     
-    if(display.innerHTML == "0" && targetValue =="0"){
-        display.innerHTML ="0";
-    } else if(display.innerHTML == "0" && targetValue =="00"){
-        display.innerHTML ="0";
-    } else if(display.innerHTML == "0" && targetValue == "."){
-        display.innerHTML = "0.";
-    } else if(display.innerHTML == "0"){
-        display.innerHTML = targetValue;
+    if(display.innerHTML.slice(-1) == "0" && targetValue =="0"){
+        display.innerHTML;
+    } else if(display.innerHTML.slice(-1) == "0" && targetValue =="00"){
+        display.innerHTML;
+    } else if((display.innerHTML.slice(-1) =="+" ||display.innerHTML.slice(-1) =="-" ||display.innerHTML.slice(-1) =="*" ||display.innerHTML.slice(-1) =="/") && targetValue == "00"){
+         display.innerHTML += "0";
+    } else if(display.innerHTML.slice(-1) == "0" && targetValue != "0"){
+        display.innerHTML = display.innerHTML.slice(0,-1) + targetValue;
     } else{
         display.innerHTML += targetValue;
     }
@@ -29,7 +29,7 @@ function formulaClick(formula){
     let formulaValue = formula.innerHTML;
     
     if(display.innerHTML.slice(-1) =="+" ||display.innerHTML.slice(-1) =="-" ||display.innerHTML.slice(-1) =="*" ||display.innerHTML.slice(-1) =="/"){
-        display.innerHTML = display.innerHTML.slice(0,-1) + formula.innerHTML;
+        display.innerHTML = display.innerHTML.slice(0,-1) + formulaValue;
     }else{
         display.innerHTML += formulaValue;
     }
